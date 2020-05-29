@@ -18,8 +18,8 @@ export const Modal: React.FC<ModalProps> = ({ title, isOpen, onClose, children }
     }
   }
 
-  return isOpen ? (
-    <div className={'modal'}>
+  return (
+    <div className={`modal ${isOpen ? 'modal--open' : ''}`}>
       <div
         ref={outsideRef}
         className={'modal__overlay'}
@@ -40,5 +40,5 @@ export const Modal: React.FC<ModalProps> = ({ title, isOpen, onClose, children }
         </div>
       </div>
     </div>
-  ) : null;
+  );
 };
