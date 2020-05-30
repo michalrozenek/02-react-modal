@@ -7,6 +7,16 @@
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
 .modal {
   position: fixed;
   top: 0;
@@ -16,7 +26,17 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
+}
+
+.modal--fade-in {
   animation-name: fadeIn;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.modal--fade-out {
+  animation-name: fadeOut;
   animation-duration: 500ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
